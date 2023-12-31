@@ -34,6 +34,6 @@ for extension in extensions:
 for file in files:
     if file == this_file: # Leave this script in the base directory
         continue
-    target_dir = file.split(".")[-1]
+    target_dir = file.split(".")[-1].lower()
     new_path = os.path.join(base, target_dir, file)
     shutil.move(file, new_path)
